@@ -1,10 +1,10 @@
-import CartaJuego from "./components/CartaJuego";
+import CardGrid from "./components/CardGrid";
 
 function App() {
 
   return(
     <>
-      <CartaJuego></CartaJuego>
+      <CardGrid></CardGrid>
     </>
   )
 }
