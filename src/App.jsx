@@ -1,8 +1,12 @@
-
+import CartaJuego from "./components/CartaJuego";
 
 function App() {
 
-  return
+  return(
+    <>
+      <CartaJuego></CartaJuego>
+    </>
+  )
 }
 
 export default App
