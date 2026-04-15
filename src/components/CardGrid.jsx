@@ -1,21 +1,20 @@
+import ItemCard from './ItemCard';
 
-import React, { useState } from 'react';
+const CardGrid = ({ items }) => {
+  return (
+    <section className="card-grid">
+      {items.length > 0 ? (
+        items.map((item) => (
+          <ItemCard key={item.id} item={item} />
+        ))
+      ) : (
+        <p>No se encontraron resultados.</p>
+      )}
+    </section>
+  );
+};
 
-function CartaJuego({ titulo, categoria, anio, destacado }) {
-    const [vistaActual, setVistaActual] = useState("normal");
-
-
-    return (
-        <div className="card">
-            <h3>{titulo}</h3>
-            <p>Categoria: {categoria}</p>
-            <p>Año de lanzamiento: {anio}</p>
-            <p>Juego destacado: {destacado}</p>
-        </div>
-    );
-}
-
-export default CartaJuego;
+export default CardGrid;
 
 //imports
 

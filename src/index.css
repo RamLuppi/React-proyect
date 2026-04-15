@@ -51,80 +51,41 @@ h1 {
   padding: 1rem;
 }
 
-.card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1.5rem;
-
-  /* El diseño de la tarjeta */
-  background-color: var(--bg-color-secundary);
-  border-radius: 16px;
-  box-shadow:
-    0 4px 6px -1px var(--shadow-main),
-    0 2px 4px -1px var(--shadow-soft);
-  border: 1px solid var(--border-card);
-  transition: transform 0.2s ease-in-out;
-
-  /* Elementos dentro de la tarjeta */
-  h3 {
-    color: var(--text-title);
-    margin-bottom: 0.5rem;
-    font-size: 1.5rem;
-  }
-
-  p {
-    margin: 2px 0;
-    color: var(--text-muted);
-    font-size: 0.9rem;
-  }
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    margin-bottom: 1rem;
-    filter: drop-shadow(0 4px 4px var(--shadow-img));
-  }
-
-  /* Contenedor invisible para agrupar los botones abajo */
-  .buttons-container {
-    margin-top: auto;
-    display: flex;
-    gap: 10px;
-    width: 100%;
-    justify-content: center;
-    padding-top: 1rem;
-  }
-
-  button {
-    padding: 8px 16px;
-    border: none;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.2s;
-  }
-
-  .evo-button {
-    background-color: var(--color-evo);
-    color: var(--text-btn-light);
-  }
-
-  .evo-button:hover {
-    background-color: var(--color-evo-hover);
-  }
-
-  .heroe-button {
-    background-color: var(--color-hero);
-    color: var(--text-btn-dark);
-  }
-
-  .heroe-button:hover {
-    background-color: var(--color-hero-hover);
-  }
-}
-
 .card:hover {
   transform: translateY(-5px);
+}
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  transition: transform 0.2s;
+}
+
+.card.highlighted {
+  border: 2px solid gold;
+  background-color: #fffdf0;
+}
+
+.card.favorite {
+  background-color: #ffe4e1;
+  box-shadow: 0 4px 8px rgba(255, 0, 0, 0.1);
+}
+
+.search-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+input {
+  padding: 10px;
+  width: 300px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
 }
